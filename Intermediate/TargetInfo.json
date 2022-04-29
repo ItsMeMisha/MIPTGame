@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "MIPTProject",
+			"Path": "D:\\Documents\\Projects\\MIPTProject\\Source\\MIPTProject.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "MIPTProjectEditor",
+			"Path": "D:\\Documents\\Projects\\MIPTProject\\Source\\MIPTProjectEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

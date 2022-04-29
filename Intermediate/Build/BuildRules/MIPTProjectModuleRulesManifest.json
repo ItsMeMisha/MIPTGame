@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Documents\\Projects\\MIPTProject\\Source\\MIPTProject\\MIPTProject.Build.cs",
+		"D:\\Documents\\Projects\\MIPTProject\\Source\\MIPTProject.Target.cs",
+		"D:\\Documents\\Projects\\MIPTProject\\Source\\MIPTProjectEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
