@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MIPTProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7EB6582A-EDAA-4DAF-9703-613A027F05F8}</UniqueIdentifier>
+      <UniqueIdentifier>{B8F676B8-102E-4BB2-B42C-AC4FDC00E977}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MIPTProject.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,11 @@
     <None Include="..\..\Source\MIPTProjectEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{FFAC0963-1FBD-48B2-86E0-A8DA808A24CF}</UniqueIdentifier>
+      <UniqueIdentifier>{C4FFB2B1-B46D-41F7-B5B8-CD5912D36CCE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MIPTProject">
-      <UniqueIdentifier>{09E18480-5A7C-459F-9222-0A0511FB747B}</UniqueIdentifier>
+      <UniqueIdentifier>{D984ED1C-78C9-4A31-B9FC-E5F1E9A52C42}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MIPTProject\MIPTProject.Build.cs">
       <Filter>Source\MIPTProject</Filter>
@@ -54,15 +57,21 @@
       <Filter>Source\MIPTProject</Filter>
     </ClInclude>
     <Filter Include="Source\MIPTProject\Private">
-      <UniqueIdentifier>{1E61795B-5397-4B85-8684-69922B423D92}</UniqueIdentifier>
+      <UniqueIdentifier>{DCA4C121-6EA9-439F-A99B-08E92805EF85}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MIPTProject\Private\BasicEnemy.cpp">
       <Filter>Source\MIPTProject\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\MIPTProject\Private\Projectile.cpp">
+      <Filter>Source\MIPTProject\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\MIPTProject\Public">
-      <UniqueIdentifier>{9F5CAB7F-E77B-427F-AE54-FC2BEE5510A4}</UniqueIdentifier>
+      <UniqueIdentifier>{1360F97B-B5E8-436F-B04E-F4B1AF206C96}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\MIPTProject\Public\BasicEnemy.h">
+      <Filter>Source\MIPTProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MIPTProject\Public\Projectile.h">
       <Filter>Source\MIPTProject\Public</Filter>
     </ClInclude>
   </ItemGroup>
