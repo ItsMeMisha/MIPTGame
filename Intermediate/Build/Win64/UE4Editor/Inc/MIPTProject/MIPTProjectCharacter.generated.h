@@ -8,14 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AProjectile;
 #ifdef MIPTPROJECT_MIPTProjectCharacter_generated_h
 #error "MIPTProjectCharacter.generated.h already included, missing '#pragma once' in MIPTProjectCharacter.h"
 #endif
 #define MIPTPROJECT_MIPTProjectCharacter_generated_h
 
 #define MIPTProject_Source_MIPTProject_MIPTProjectCharacter_h_23_SPARSE_DATA
-#define MIPTProject_Source_MIPTProject_MIPTProjectCharacter_h_23_RPC_WRAPPERS
-#define MIPTProject_Source_MIPTProject_MIPTProjectCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS
+#define MIPTProject_Source_MIPTProject_MIPTProjectCharacter_h_23_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRecieveDamage);
+
+
+#define MIPTProject_Source_MIPTProject_MIPTProjectCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRecieveDamage);
+
+
 #define MIPTProject_Source_MIPTProject_MIPTProjectCharacter_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMIPTProjectCharacter(); \

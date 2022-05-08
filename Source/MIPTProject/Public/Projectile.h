@@ -16,12 +16,12 @@ class MIPTPROJECT_API AProjectile : public APaperSpriteActor
 {
 	GENERATED_BODY()
 
-private:
+protected:
 	UPROPERTY()
 		UProjectileMovementComponent* ProjectileMovementComponent;
 
-	/*UPROPERTY()
-		USphereComponent* CollisionComponent; */
+	UPROPERTY()
+		int32 Damage = 1;
 
 public:
 	AProjectile();
@@ -32,5 +32,8 @@ public:
 
 	UFUNCTION()
 		void ThrowInDirection(FVector Direction);
+
+	UFUNCTION()
+		FORCEINLINE int32 GetDamage() { return Damage; }
 
 };

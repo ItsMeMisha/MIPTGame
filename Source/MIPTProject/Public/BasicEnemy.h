@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "HealthComponent.h"
+#include "Projectile.h"
 #include "PaperCharacter.h"
 #include "BasicEnemy.generated.h"
 
@@ -14,6 +16,13 @@ class MIPTPROJECT_API ABasicEnemy : public APaperCharacter
 {
 	GENERATED_BODY()
 	
+protected:
+	UPROPERTY()
+		UHealthComponent* HealthComponent = nullptr;
+
 public:
-	void RecieveDamage();
+	ABasicEnemy();
+
+	UFUNCTION()
+		void RecieveDamage(AProjectile* Projectile);
 };

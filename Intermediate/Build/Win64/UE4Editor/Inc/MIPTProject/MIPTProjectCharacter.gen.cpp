@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 	MIPTPROJECT_API UClass* Z_Construct_UClass_AMIPTProjectCharacter();
 	PAPER2D_API UClass* Z_Construct_UClass_APaperCharacter();
 	UPackage* Z_Construct_UPackage__Script_MIPTProject();
+	MIPTPROJECT_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
@@ -24,8 +25,53 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AMIPTProjectCharacter::execRecieveDamage)
+	{
+		P_GET_OBJECT(AProjectile,Z_Param_Projectile);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecieveDamage(Z_Param_Projectile);
+		P_NATIVE_END;
+	}
 	void AMIPTProjectCharacter::StaticRegisterNativesAMIPTProjectCharacter()
 	{
+		UClass* Class = AMIPTProjectCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "RecieveDamage", &AMIPTProjectCharacter::execRecieveDamage },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics
+	{
+		struct MIPTProjectCharacter_eventRecieveDamage_Parms
+		{
+			AProjectile* Projectile;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Projectile;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::NewProp_Projectile = { "Projectile", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MIPTProjectCharacter_eventRecieveDamage_Parms, Projectile), Z_Construct_UClass_AProjectile_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::NewProp_Projectile,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MIPTProjectCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMIPTProjectCharacter, nullptr, "RecieveDamage", nullptr, nullptr, sizeof(MIPTProjectCharacter_eventRecieveDamage_Parms), Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AMIPTProjectCharacter_NoRegister()
 	{
@@ -34,6 +80,7 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 	struct Z_Construct_UClass_AMIPTProjectCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -68,6 +115,9 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 	UObject* (*const Z_Construct_UClass_AMIPTProjectCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_APaperCharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_MIPTProject,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AMIPTProjectCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMIPTProjectCharacter_RecieveDamage, "RecieveDamage" }, // 1251998759
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMIPTProjectCharacter_Statics::Class_MetaDataParams[] = {
@@ -147,11 +197,11 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AMIPTProjectCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AMIPTProjectCharacter_Statics::PropPointers),
 		0,
 		0x008000A4u,
@@ -166,7 +216,7 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMIPTProjectCharacter, 1672434857);
+	IMPLEMENT_CLASS(AMIPTProjectCharacter, 2046812476);
 	template<> MIPTPROJECT_API UClass* StaticClass<AMIPTProjectCharacter>()
 	{
 		return AMIPTProjectCharacter::StaticClass();

@@ -224,3 +224,10 @@ void AMIPTProjectCharacter::UpdateCharacter()
 		}
 	}
 }
+
+void AMIPTProjectCharacter::RecieveDamage(AProjectile* Projectile) 
+{
+	if (Projectile) {
+		HealthComponent->RecieveDamage(Projectile->GetDamage());
+	}
+}

@@ -46,11 +46,13 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, U
 	AMIPTProjectCharacter* Player = Cast<AMIPTProjectCharacter>(OtherActor);
 	if (Player) {
 		UE_LOG(LogTemp, Warning, TEXT("Projectile hit player"));
+		Player->RecieveDamage(this);
 	}
 
 	ABasicEnemy* Enemy = Cast<ABasicEnemy>(OtherActor);
 	if (Enemy) {
 		UE_LOG(LogTemp, Warning, TEXT("Projectile hit enemy"));
+		Enemy->RecieveDamage(this);
 	}
 
 	Destroy();
