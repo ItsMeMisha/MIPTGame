@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "HealthComponent.h"
 #include "MIPTProjectCharacter.generated.h"
 
 class UTextRenderComponent;
@@ -40,6 +41,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* IdleAnimation;
 
+	UPROPERTY()
+		UHealthComponent* HealthComponent;
+
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
 
@@ -57,6 +61,15 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
+
+	bool bKeepThrowProjectile = false;
+	
+	UPROPERTY()
+		UClass* ProjectileClass;
+
+	void StartThrowProjectile();
+	void FinishThrowProjectile();
+	void ThrowProjectile();
 
 public:
 	AMIPTProjectCharacter();

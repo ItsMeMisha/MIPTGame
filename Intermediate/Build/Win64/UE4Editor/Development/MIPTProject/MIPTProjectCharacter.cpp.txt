@@ -8,14 +8,28 @@ D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperCharacter.generated.h
+D:\Documents\Projects\MIPTProject\Source\MIPTProject\Public\HealthComponent.h
+D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Inc\MIPTProject\HealthComponent.generated.h
 D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Inc\MIPTProject\MIPTProjectCharacter.generated.h
+D:\Documents\Projects\MIPTProject\Source\MIPTProject\Public\Projectile.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperSpriteActor.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperSpriteActor.generated.h
+D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Inc\MIPTProject\Projectile.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperFlipbookComponent.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbookComponent.generated.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperFlipbook.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbook.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextRenderComponent.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
@@ -28,8 +42,6 @@ D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h

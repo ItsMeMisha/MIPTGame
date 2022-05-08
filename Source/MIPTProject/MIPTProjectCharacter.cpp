@@ -1,7 +1,9 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "MIPTProjectCharacter.h"
+#include "Projectile.h"
 #include "PaperFlipbookComponent.h"
+#include "PaperFlipbook.h"
 #include "Components/TextRenderComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -21,6 +23,17 @@ AMIPTProjectCharacter::AMIPTProjectCharacter()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = true;
 	bUseControllerRotationRoll = false;
+
+	//Sprites
+	ConstructorHelpers::FObjectFinder<UPaperFlipbook> IdleAnimationSource(TEXT("PaperFlipbook'/Game/2DSideScroller/Sprites/IdleAnimation.IdleAnimation'"));
+	if (IdleAnimationSource.Succeeded()) {
+		IdleAnimation = IdleAnimationSource.Object;
+	}
+
+	ConstructorHelpers::FObjectFinder<UPaperFlipbook> RunningAnimationSource(TEXT("PaperFlipbook'/Game/2DSideScroller/Sprites/RunningAnimation.RunningAnimation'"));
+	if (RunningAnimationSource.Succeeded()) {
+		RunningAnimation = RunningAnimationSource.Object;
+	}
 
 	// Set the size of our collision capsule.
 	GetCapsuleComponent()->SetCapsuleHalfHeight(96.0f);
@@ -74,6 +87,15 @@ AMIPTProjectCharacter::AMIPTProjectCharacter()
 	// Enable replication on the Sprite component so animations show up when networked
 	GetSprite()->SetIsReplicated(true);
 	bReplicates = true;
+
+	//Healt
+	if (!HealthComponent) {
+		HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
+	}
+	HealthComponent->SetHealthPoints(5);
+	HealthComponent->SetMaxHealthPoints(5);
+
+	ProjectileClass = AProjectile::StaticClass();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -112,6 +134,9 @@ void AMIPTProjectCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AMIPTProjectCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &AMIPTProjectCharacter::TouchStopped);
+
+	PlayerInputComponent->BindAction("ThrowProjectile", IE_Pressed, this, &AMIPTProjectCharacter::StartThrowProjectile);
+	PlayerInputComponent->BindAction("ThrowProjectile", IE_Released, this, &AMIPTProjectCharacter::FinishThrowProjectile);
 }
 
 void AMIPTProjectCharacter::MoveRight(float Value)
@@ -132,6 +157,50 @@ void AMIPTProjectCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, co
 {
 	// Cease jumping once touch stopped
 	StopJumping();
+}
+
+void AMIPTProjectCharacter::StartThrowProjectile() 
+{
+	ThrowProjectile();
+	bKeepThrowProjectile = true;
+}
+
+void AMIPTProjectCharacter::FinishThrowProjectile() 
+{
+	bKeepThrowProjectile = false;
+}
+
+void AMIPTProjectCharacter::ThrowProjectile() 
+{
+	FVector LaunchDirection(1, 0, 0);
+	FVector SpawnLocaion(GetActorLocation());
+	if (Controller) {
+		FRotator FacingDirection = Controller->GetControlRotation();
+		LaunchDirection = FTransform(FacingDirection).TransformVector(LaunchDirection);
+		SpawnLocaion += LaunchDirection * 100;
+	}
+
+	if (!ProjectileClass) {
+		UE_LOG(LogTemp, Error, TEXT("No prjectile class assigned"));
+	}
+
+	UWorld* World = GetWorld();
+	if (World)
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		// Spawn the projectile at the muzzle.
+		AProjectile* Projectile = World->SpawnActor<AProjectile>(ProjectileClass, SpawnLocaion, Controller->GetControlRotation(), SpawnParams);
+		if (Projectile)
+		{
+			Projectile->ThrowInDirection(LaunchDirection);
+		}
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("World Not Found"));
+	}
 }
 
 void AMIPTProjectCharacter::UpdateCharacter()

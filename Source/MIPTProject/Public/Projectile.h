@@ -20,8 +20,8 @@ private:
 	UPROPERTY()
 		UProjectileMovementComponent* ProjectileMovementComponent;
 
-	UPROPERTY()
-		USphereComponent* CollisionComponent;
+	/*UPROPERTY()
+		USphereComponent* CollisionComponent; */
 
 public:
 	AProjectile();

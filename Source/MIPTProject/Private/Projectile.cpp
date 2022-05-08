@@ -6,32 +6,33 @@
 #include "PaperSprite.h"
 #include "../MIPTProjectCharacter.h"
 #include "BasicEnemy.h"
-s
+
 AProjectile::AProjectile()
 {
 	ConstructorHelpers::FObjectFinder<UPaperSprite> sprite(TEXT("PaperSprite'/Game/2DSideScroller/Sprites/Projectile.Projectile'"));
 	if (sprite.Succeeded()) {
 		GetRenderComponent()->SetSprite(sprite.Object);
+		GetRenderComponent()->SetMobility(EComponentMobility::Type::Movable);
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("Projectile sprite not set"));
 	}
 
-	if (!CollisionComponent) {
-		CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
-	}
-
+	
 	if (!ProjectileMovementComponent) {
 		ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
 	}
-	ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);
-	ProjectileMovementComponent->InitialSpeed = 1000.0f;
-	ProjectileMovementComponent->MaxSpeed = 1000.0f;
+	ProjectileMovementComponent->SetUpdatedComponent(RootComponent);
+	ProjectileMovementComponent->InitialSpeed = 2000.0f;
+	ProjectileMovementComponent->MaxSpeed = 2000.0f;
 	ProjectileMovementComponent->bRotationFollowsVelocity = true;
 	ProjectileMovementComponent->bShouldBounce = false;
 	ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 
 	InitialLifeSpan = 5.0f;
 
-	CollisionComponent->BodyInstance.SetCollisionProfileName(TEXT("Projectile"));
-	CollisionComponent->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
+	GetRenderComponent()->BodyInstance.SetCollisionProfileName(TEXT("Projectile"));
+	GetRenderComponent()->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
 }
 
 void AProjectile::ThrowInDirection(FVector Direction)

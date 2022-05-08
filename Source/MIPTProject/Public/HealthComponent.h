@@ -31,17 +31,17 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION()
-		FORCEINLINE void SetHealthPoints(int32 NewHealthPoints) { if (NewHealthPoints > 0) HealthPoints = NewHealthPoints; }
+		void SetHealthPoints(int32 NewHealthPoints) { if (NewHealthPoints > 0) HealthPoints = NewHealthPoints; }
 
 	UFUNCTION()
-		FORCEINLINE void SetMaxHealthPoints(int32 NewMaxHealthPoints) { if (NewMaxHealthPoints > 0) MaxHealthPoints = NewMaxHealthPoints; }
+		void SetMaxHealthPoints(int32 NewMaxHealthPoints) { if (NewMaxHealthPoints > 0) MaxHealthPoints = NewMaxHealthPoints; }
 
 
 	UFUNCTION()
-		FORCEINLINE void Heal(int32 HealAmount) { HealthPoints + HealAmount > MaxHealthPoints ? HealthPoints = MaxHealthPoints : HealthPoints += HealAmount; }
+		void Heal(int32 HealAmount) { HealthPoints + HealAmount > MaxHealthPoints ? HealthPoints = MaxHealthPoints : HealthPoints += HealAmount; }
 
 	UFUNCTION()
-		FORCEINLINE void RecieveDamage(int32 DamageAmount) { if (HealthPoints > 0) HealthPoints -= DamageAmount; }
+		void RecieveDamage(int32 DamageAmount) { if (HealthPoints > 0) HealthPoints -= DamageAmount; }
 
 	UFUNCTION()
 		FORCEINLINE bool IsDead() const { return HealthPoints <= 0; }
