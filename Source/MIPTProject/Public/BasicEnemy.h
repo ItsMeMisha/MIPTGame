@@ -14,4 +14,6 @@ class MIPTPROJECT_API ABasicEnemy : public APaperCharacter
 {
 	GENERATED_BODY()
 	
+public:
+	void RecieveDamage();
 };

@@ -4,12 +4,9 @@
 #include "Projectile.h"
 #include "PaperSpriteComponent.h"
 #include "PaperSprite.h"
-//#include "MIPTProjectCharacter.h"
-//#include "BasicEnemy.h"
-
-class AMIPTProjectCharacter;
-class ABasicEnemy;
-
+#include "../MIPTProjectCharacter.h"
+#include "BasicEnemy.h"
+s
 AProjectile::AProjectile()
 {
 	ConstructorHelpers::FObjectFinder<UPaperSprite> sprite(TEXT("PaperSprite'/Game/2DSideScroller/Sprites/Projectile.Projectile'"));

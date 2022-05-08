@@ -8,11 +8,13 @@
 /NODEFAULTLIB
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\MIPTProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\BasicEnemy.cpp.obj"
+"D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\HealthComponent.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\Projectile.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\MIPTProject.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\MIPTProjectCharacter.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\MIPTProjectGameMode.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\BasicEnemy.gen.cpp.obj"
+"D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\HealthComponent.gen.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\MIPTProject.init.gen.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\MIPTProjectCharacter.gen.cpp.obj"
 "D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development\MIPTProject\MIPTProjectGameMode.gen.cpp.obj"
