@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Perception/PawnSensingComponent.h"
 #include "HealthComponent.h"
 #include "Projectile.h"
 #include "PaperCharacter.h"
@@ -17,12 +18,18 @@ class MIPTPROJECT_API ABasicEnemy : public APaperCharacter
 	GENERATED_BODY()
 	
 protected:
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, Category = Stats)
 		UHealthComponent* HealthComponent = nullptr;
+
+	UPROPERTY(EditAnywhere, Category = Sensing)
+		UPawnSensingComponent* SensingComponent;
+
+	UFUNCTION()
+		virtual void Die();
 
 public:
 	ABasicEnemy();
 
 	UFUNCTION()
-		void RecieveDamage(AProjectile* Projectile);
+		virtual void RecieveDamage(AProjectile* Projectile);
 };

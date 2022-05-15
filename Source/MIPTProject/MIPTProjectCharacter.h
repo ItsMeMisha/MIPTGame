@@ -41,7 +41,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* IdleAnimation;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, Category = Stats)
 		UHealthComponent* HealthComponent;
 
 	/** Called to choose the correct animation to play based on the character's movement state */

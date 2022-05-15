@@ -2,6 +2,8 @@ D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Development
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 D:\Documents\Projects\MIPTProject\Source\MIPTProject/Public/BasicEnemy.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/PawnSensingComponent.h
+D:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\PawnSensingComponent.generated.h
 D:\Documents\Projects\MIPTProject\Source\MIPTProject\Public\HealthComponent.h
 D:\Documents\Projects\MIPTProject\Intermediate\Build\Win64\UE4Editor\Inc\MIPTProject\HealthComponent.generated.h
 D:\Documents\Projects\MIPTProject\Source\MIPTProject\Public\Projectile.h

@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 	UPackage* Z_Construct_UPackage__Script_MIPTProject();
 	MIPTPROJECT_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 	MIPTPROJECT_API UClass* Z_Construct_UClass_UHealthComponent_NoRegister();
+	AIMODULE_API UClass* Z_Construct_UClass_UPawnSensingComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ABasicEnemy::execRecieveDamage)
 	{
@@ -28,13 +29,43 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 		P_THIS->RecieveDamage(Z_Param_Projectile);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ABasicEnemy::execDie)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Die();
+		P_NATIVE_END;
+	}
 	void ABasicEnemy::StaticRegisterNativesABasicEnemy()
 	{
 		UClass* Class = ABasicEnemy::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Die", &ABasicEnemy::execDie },
 			{ "RecieveDamage", &ABasicEnemy::execRecieveDamage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ABasicEnemy_Die_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABasicEnemy_Die_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/BasicEnemy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasicEnemy_Die_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasicEnemy, nullptr, "Die", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABasicEnemy_Die_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasicEnemy_Die_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ABasicEnemy_Die()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABasicEnemy_Die_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics
 	{
@@ -58,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 		{ "ModuleRelativePath", "Public/BasicEnemy.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasicEnemy, nullptr, "RecieveDamage", nullptr, nullptr, sizeof(BasicEnemy_eventRecieveDamage_Parms), Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasicEnemy, nullptr, "RecieveDamage", nullptr, nullptr, sizeof(BasicEnemy_eventRecieveDamage_Parms), Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasicEnemy_RecieveDamage_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ABasicEnemy_RecieveDamage()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -83,6 +114,10 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HealthComponent_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HealthComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SensingComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SensingComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -92,7 +127,8 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_MIPTProject,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABasicEnemy_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABasicEnemy_RecieveDamage, "RecieveDamage" }, // 623136261
+		{ &Z_Construct_UFunction_ABasicEnemy_Die, "Die" }, // 3992196172
+		{ &Z_Construct_UFunction_ABasicEnemy_RecieveDamage, "RecieveDamage" }, // 2180542683
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasicEnemy_Statics::Class_MetaDataParams[] = {
@@ -104,13 +140,23 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent_MetaData[] = {
+		{ "Category", "Stats" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/BasicEnemy.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent = { "HealthComponent", nullptr, (EPropertyFlags)0x0020080000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasicEnemy, HealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent = { "HealthComponent", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasicEnemy, HealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasicEnemy_Statics::NewProp_SensingComponent_MetaData[] = {
+		{ "Category", "Sensing" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/BasicEnemy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasicEnemy_Statics::NewProp_SensingComponent = { "SensingComponent", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasicEnemy, SensingComponent), Z_Construct_UClass_UPawnSensingComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABasicEnemy_Statics::NewProp_SensingComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasicEnemy_Statics::NewProp_SensingComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasicEnemy_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasicEnemy_Statics::NewProp_HealthComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasicEnemy_Statics::NewProp_SensingComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABasicEnemy_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABasicEnemy>::IsAbstract,
@@ -139,7 +185,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABasicEnemy, 1501424326);
+	IMPLEMENT_CLASS(ABasicEnemy, 3741468236);
 	template<> MIPTPROJECT_API UClass* StaticClass<ABasicEnemy>()
 	{
 		return ABasicEnemy::StaticClass();

@@ -170,11 +170,12 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_IdleAnimation = { "IdleAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMIPTProjectCharacter, IdleAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_IdleAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_IdleAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent_MetaData[] = {
+		{ "Category", "Stats" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MIPTProjectCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent = { "HealthComponent", nullptr, (EPropertyFlags)0x0020080000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMIPTProjectCharacter, HealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent = { "HealthComponent", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMIPTProjectCharacter, HealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_HealthComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMIPTProjectCharacter_Statics::NewProp_ProjectileClass_MetaData[] = {
 		{ "ModuleRelativePath", "MIPTProjectCharacter.h" },
@@ -216,7 +217,7 @@ void EmptyLinkFunctionForGeneratedCodeMIPTProjectCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMIPTProjectCharacter, 2046812476);
+	IMPLEMENT_CLASS(AMIPTProjectCharacter, 612451462);
 	template<> MIPTPROJECT_API UClass* StaticClass<AMIPTProjectCharacter>()
 	{
 		return AMIPTProjectCharacter::StaticClass();

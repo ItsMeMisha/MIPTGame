@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MIPTProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{0646C9D4-18EE-4E60-A794-F7FAFCF12184}</UniqueIdentifier>
+      <UniqueIdentifier>{7B8122BF-5BB5-4D4D-8301-11AD35B1A349}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MIPTProject.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A58EDB67-C0C4-41DA-B08C-F91EAF0520B2}</UniqueIdentifier>
+      <UniqueIdentifier>{932B6CC3-1C46-42FA-B2FE-BF3539D39E97}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MIPTProject">
-      <UniqueIdentifier>{A7D93A8E-A74D-4083-9450-05EEB2DC96D9}</UniqueIdentifier>
+      <UniqueIdentifier>{E8B7D8E0-7FBA-4632-A39B-1ED1C49A12EE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MIPTProject\MIPTProject.Build.cs">
       <Filter>Source\MIPTProject</Filter>
@@ -57,8 +57,14 @@
       <Filter>Source\MIPTProject</Filter>
     </ClInclude>
     <Filter Include="Source\MIPTProject\Private">
-      <UniqueIdentifier>{C2989E63-C804-4913-B6F7-9C9AAAB99857}</UniqueIdentifier>
+      <UniqueIdentifier>{91E392B5-A322-4E4C-AD9D-00B50697B292}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MIPTProject\Private\BasicAIController.cpp">
+      <Filter>Source\MIPTProject\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MIPTProject\Private\BasicBoss.cpp">
+      <Filter>Source\MIPTProject\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\MIPTProject\Private\BasicEnemy.cpp">
       <Filter>Source\MIPTProject\Private</Filter>
     </ClCompile>
@@ -69,8 +75,14 @@
       <Filter>Source\MIPTProject\Private</Filter>
     </ClCompile>
     <Filter Include="Source\MIPTProject\Public">
-      <UniqueIdentifier>{B3FEB0C9-9EB1-4DA0-9C64-245D3C1225CC}</UniqueIdentifier>
+      <UniqueIdentifier>{5D014611-2CC3-4BFB-9700-E7DDE5D319C1}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\MIPTProject\Public\BasicAIController.h">
+      <Filter>Source\MIPTProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MIPTProject\Public\BasicBoss.h">
+      <Filter>Source\MIPTProject\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MIPTProject\Public\BasicEnemy.h">
       <Filter>Source\MIPTProject\Public</Filter>
     </ClInclude>

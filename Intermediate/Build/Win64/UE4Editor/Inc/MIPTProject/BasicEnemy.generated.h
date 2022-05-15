@@ -14,18 +14,20 @@ class AProjectile;
 #endif
 #define MIPTPROJECT_BasicEnemy_generated_h
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_SPARSE_DATA
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_RPC_WRAPPERS \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_SPARSE_DATA
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execRecieveDamage);
+	DECLARE_FUNCTION(execRecieveDamage); \
+	DECLARE_FUNCTION(execDie);
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execRecieveDamage);
+	DECLARE_FUNCTION(execRecieveDamage); \
+	DECLARE_FUNCTION(execDie);
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_INCLASS_NO_PURE_DECLS \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABasicEnemy(); \
 	friend struct Z_Construct_UClass_ABasicEnemy_Statics; \
@@ -34,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ABasicEnemy)
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_INCLASS \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesABasicEnemy(); \
 	friend struct Z_Construct_UClass_ABasicEnemy_Statics; \
@@ -43,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(ABasicEnemy)
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_STANDARD_CONSTRUCTORS \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABasicEnemy(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABasicEnemy) \
@@ -56,7 +58,7 @@ private: \
 public:
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_ENHANCED_CONSTRUCTORS \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABasicEnemy(ABasicEnemy&&); \
@@ -67,31 +69,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABasicEnemy)
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__HealthComponent() { return STRUCT_OFFSET(ABasicEnemy, HealthComponent); }
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__HealthComponent() { return STRUCT_OFFSET(ABasicEnemy, HealthComponent); } \
+	FORCEINLINE static uint32 __PPO__SensingComponent() { return STRUCT_OFFSET(ABasicEnemy, SensingComponent); }
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_14_PROLOG
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_GENERATED_BODY_LEGACY \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_15_PROLOG
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_PRIVATE_PROPERTY_OFFSET \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_SPARSE_DATA \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_RPC_WRAPPERS \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_INCLASS \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_STANDARD_CONSTRUCTORS \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_PRIVATE_PROPERTY_OFFSET \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_SPARSE_DATA \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_RPC_WRAPPERS \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_INCLASS \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_GENERATED_BODY \
+#define MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_PRIVATE_PROPERTY_OFFSET \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_SPARSE_DATA \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_INCLASS_NO_PURE_DECLS \
-	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_17_ENHANCED_CONSTRUCTORS \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_PRIVATE_PROPERTY_OFFSET \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_SPARSE_DATA \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_INCLASS_NO_PURE_DECLS \
+	MIPTProject_Source_MIPTProject_Public_BasicEnemy_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

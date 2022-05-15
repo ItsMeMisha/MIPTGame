@@ -34,7 +34,13 @@ public:
 		void SetHealthPoints(int32 NewHealthPoints) { if (NewHealthPoints > 0) HealthPoints = NewHealthPoints; }
 
 	UFUNCTION()
+		FORCEINLINE int32 GetMaxHealthPoints() { return MaxHealthPoints; }
+
+	UFUNCTION()
 		void SetMaxHealthPoints(int32 NewMaxHealthPoints) { if (NewMaxHealthPoints > 0) MaxHealthPoints = NewMaxHealthPoints; }
+
+	UFUNCTION()
+		FORCEINLINE int32 GetHealthPoints() { return HealthPoints; }
 
 
 	UFUNCTION()
